@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - Edit Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+
+</head>
+<body>
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+					<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+	            <li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	            <li class="footer-menu-text"><a id="madeByAuthor" href="https://www.kuroit.com/">Designed By Kuroit</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="home.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="user-chat-list.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="pages section">
+		<div class="container">
+			<div class="pages-head">
+				<!-- <h3>REGISTER</h3> -->
+			</div>
+			<div class="register">
+				<div class="row">
+					<form id="msform" action="">
+					  <!-- fieldsets -->  
+					  <fieldset>    
+					    <h2 class="fs-title">Modify or Edit Your Profile</h2>
+					    <!-- <input type="number" name="wk_id" id="wk_id" placeholder="Add id" /> -->
+					    <input type="text" name="username" id="username" placeholder="Add Company name" />
+					    <input type="text" name="omschrijving" id="omschrijving" placeholder="Add Bio" />
+					    <input type="number" name="contact" id="contact" placeholder="contact" />	
+					    <input type="text" name="adres" id="adres" placeholder="adres" />
+					    <input type="text" name="bedrijf" id="bedrijf" placeholder="bedrijf" />
+					    <input type="text" name="bedrijfsnaam" id="bedrijfsnaam" placeholder="bedrijfsnaam" />
+					    <input type="button" name="update" id="next-action" class="next action-button" value="Next" />  
+					  </fieldset>
+					  <fieldset class="add-personal-info"> 
+					  	<input type="number" name="postcode" id="postcode" placeholder="postcode" />
+					    <input type="text" name="woonplaats" id="woonplaats" placeholder="woonplaats" />
+					    <input type="number" name="telefoon" id="telefoon" placeholder="telefoon" />
+					    <input type="number" name="mobiel" id="mobiel" placeholder="mobiel" />
+					    <input type="number" name="whatsapp" id="whatsapp" placeholder="whatsapp" />
+					    <input type="email" name="website" id="website" placeholder="website" />	    
+					    <input type="submit" name="submit2" class="action-button" id="action-button-2" value="Update" />   
+					  </fieldset>  
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end register -->
+	<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+	    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+	     xml:space="preserve">
+	        <g>
+	          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+	            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+	            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+	            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+	            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+	            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+	        </g>
+	    </svg>
+	 </a>
+	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">	
+		$("#action-button-2").on('click',function(e){
+			e.preventDefault();
+				function getSearchParams(k){
+				 	var p={};
+				 	location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){p[k]=v})
+				 	return k?p[k]:p;
+				}
+			  	var wk_id          = getSearchParams('wk_id');
+			  	var username       = $('#username').val();
+			  	var contact        = $('#contact').val();
+			  	var adres          = $('#adres').val();
+			  	var bedrijf 	   = $('#bedrijf').val();
+			  	var bedrijfsnaam   = $('#bedrijfsnaam').val();
+			  	var postcode   	   = $('#postcode').val();
+			  	var woonplaats     = $('#woonplaats').val();
+			  	var telefoon       = $('#telefoon').val();
+			  	var mobiel         = $('#mobiel').val();
+			  	var whatsapp       = $('#whatsapp').val();
+			  	var website        = $('#website').val();
+			  	var omschrijving   = $('#omschrijving').val();
+			  	// Ajax call
+				var globalurl = "https://www.yessellit.nl/api";
+			  	// signup api
+			  	var url = globalurl+"/update-app.php";
+				$.ajax({
+				    type: "POST",
+				    url:  url,
+				    data: {
+				  		wk_id          : wk_id,		  	
+			  	 		username       : username,
+			  	 		contact        : contact,
+			  	 		adres          : adres,
+			  	 		bedrijf 	   : bedrijf,
+			  	 		bedrijfsnaam   : bedrijfsnaam,
+			  	 		postcode   	   : postcode,
+			  	 		woonplaats     : woonplaats,
+			  	 		telefoon       : telefoon,
+			  	 		mobiel         : mobiel,
+			   			whatsapp       : whatsapp,
+			  	 		website        : website,
+			  	 		omschrijving   : omschrijving
+				    },
+				  cache: false,
+				  success: function(data){
+				    	alert('Your Profile is Updated Successfully!');
+				    	location.reload();		    	
+				  },
+				  error: function(error){
+				  	var decoded_data = $.parseJSON(error.responseText);
+				    var status_code = decoded_data.meta.code;
+				    if(status_code == 403){
+				    	alert(decoded_data);
+				    	alert(decoded_data.meta.message);
+				    }
+				   },		    	
+				});
+			});
+		$( document ).ready(function(){
+			$(".button-collapse").sideNav();
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+				// $('#addProduct').hide(500);
+				// $('#favAddList').hide(500);
+				// $('#userProductList').hide(500);
+				// $('#logoutMenu').hide(500);
+			}
+			// fav list
+			// var user_fav_add = localStorage.getItem("user_fav_add");
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+			// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+		});
+	</script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+	  		$(".button-collapse").sideNav();
+	  		// form js next >> previous <<
+	  		//jQuery time
+			var current_fs, next_fs, previous_fs; //fieldsets
+			var left, opacity, scale; //fieldset properties which we will animate
+			var animating; //flag to prevent quick multi-click glitches
+
+			$(".next").click(function(){
+				var email = $('#emailuser').val();
+				var username = $('#username').val();
+				var set = $('#set').val();
+				if(email == ''){
+					$('#emailuser').css('border','1px solid red');
+					return false;
+				}
+				if(username == ''){
+					$('#username').css('border','1px solid red');
+					return false;
+				}
+				if(set == '1'){
+					$('#companyname').hide(500);
+				}else{
+					$('#companyname').show(500);
+				}
+				
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+				
+				//activate next step on progressbar using the index of next_fs
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				
+				//show the next fieldset
+				next_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale current_fs down to 80%
+						scale = 1 - (1 - now) * 0.2;
+						//2. bring next_fs from the right(50%)
+						left = (now * 50)+"%";
+						//3. increase opacity of next_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({
+			        'transform': 'scale('+scale+')',
+			        'position': 'absolute'
+			      });
+						next_fs.css({'left': left, 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});
+
+			$(".previous").click(function(){
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+				
+				//de-activate current step on progressbar
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				
+				//show the previous fieldset
+				previous_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale previous_fs from 80% to 100%
+						scale = 0.8 + (1 - now) * 0.2;
+						//2. take current_fs to the right(50%) - from 0%
+						left = ((1-now) * 50)+"%";
+						//3. increase opacity of previous_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'left': left});
+						previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});			
+		});
+	</script>
+<style type="text/css">
+	.register {
+	    width: 100%;
+	    margin-bottom: 90px;
+	}
+</style>
+</body>
+
+</html>

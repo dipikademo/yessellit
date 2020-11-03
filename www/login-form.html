@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Form Yessellit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" type="text/css" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="font/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css-login/util.css">
+	<link rel="stylesheet" type="text/css" href="css-login/main.css">	
+	<!-- <link rel="stylesheet" href="css/materialize.css"> -->
+<!--===============================================================================================-->
+<style type="text/css">
+	#target {
+	    display: none;
+	    margin-top: 15px;
+	    background: rgba(40, 135, 247, .1);
+	    padding: 20px;
+	}
+	div#target label {
+	    font-size: 15px;
+	    color: #171717;
+	}
+	#target input[type=email]{
+	    background-color: transparent;
+	    border: none;
+	    border: 1px solid #ddd;
+	    border-radius: 0;
+	    outline: none;
+	    height: 3rem;
+	    width: 100%;
+	    font-size: 1rem;
+	    margin: 0 0 10px 0;
+	    padding: 0 12px;
+	    box-shadow: none;
+	    box-sizing: border-box;
+	    transition: all 0.3s;
+	}
+	#get-email {
+	    background: #2887f7;
+	    color: #fff;
+	    letter-spacing: 1px;
+	    box-shadow: none;
+	    margin: 10px 0 0;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    line-height: 29px;
+	    border: 1px solid #2887f7;
+	    font-size: 14px;
+	    width: 100%;
+	    max-width: fit-content;
+	}
+	a.txt2.toggle h6 {
+	    font-size: 14px;
+	    font-weight: 100;
+	    margin-top: 3px;
+	    text-transform: capitalize;
+	}
+	span.required-field {
+	    margin-left: 2px;
+	    color: red;
+	    font-size: 10px;
+	    font-weight: 600;
+	    letter-spacing: 1.2px;
+	}
+	#fakeLoader {
+	    background: #ad5389;
+	    background: -webkit-linear-gradient(to top, #2887f7, #1503bc);
+	    background: linear-gradient(to top, #2887f7, #1503bc);
+	}
+	.inner-back-section img {
+	    width: 100%;
+	    margin: 0 20px;
+	}
+	.body-after {
+		    content: "";
+		    position: fixed;
+		    background: rgba(0, 0, 0, 0.5);
+		    z-index: 99;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    display: none;
+		}
+
+		#refresh {
+		    position: fixed;
+		    top: 5px;
+		    right: 20px;
+		    background-color: #ffffff;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 40px;
+		    box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+		    padding: 8px 0 0 8px;
+		    z-index: 998;
+		}
+		.body-after:before {
+		    content: "Internet Connection Lost";
+		    position: absolute;
+		    top: 0;
+		    left: -12px;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		    justify-content: center;
+		    color: #ffffff;
+		    font-size: 18px;
+		    background: rgba(0, 0, 0, .8);
+		    padding: 15px;
+		}
+		.icon {
+		    fill: #000000;
+		    transform: rotate(0deg);
+		    transition: fill .25s ease, transform .25s ease;
+		}
+
+		.icon:hover {
+		    fill: #1059FF;
+		    transform: rotate(180deg);
+		}
+</style>
+</head>
+<body>
+	<!-- loader -->
+	<div id="fakeLoader"></div>
+	<!-- end loader -->
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="header-app-image p-t-10">
+				<a href="#" data-activates="mobile-demo" class="button-collapse" style="visibility: hidden;"><i class="fa fa-bars"></i></a>
+	        	<a href="javascript: history.go(-1)" class="back-link"><i class="fa fa-arrow-left" style="color: white;position: absolute;top: -40px; right: 40px;"></i></a>
+				<img src="images/app-home.png"></div>	
+			<div class="wrap-login100 p-l-55 p-r-55">						
+					<form class="col s12" action="" method="get">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
+						<span class="label-input100 p-b-10 email">Email</span>
+						<input type="email" id="user_email" class="input100 validate" placeholder="Enter Email" required>
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100 pass">Password</span>
+						<input type="password" id="user_pass" class="input100 validate" placeholder="Enter Password" required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+					
+					<div class="p-t-8 p-b-31">
+						<a href="javascript:void(0)" class="txt2 toggle"><h6>Forgot Password ?</h6></a>
+						<div id="target">
+							<label for="forget-pass">Enter email</label>
+							<input type="email" name="email" id="forget-pass">
+							<p id="get-email">Change Password</p>
+						</div>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn button-default">Login</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="forget-pass">
+				<p style="color: white;">© 2020 All Right Reserved</p>
+			</div>
+			<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+		    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+		     xml:space="preserve">
+		        <g>
+		          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+		            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+		            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+		            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+		            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+		            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+		        </g>
+		    </svg>
+		 </a>
+		</div>
+	</div>
+</body>
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){	
+	  		var globalurl = "https://www.yessellit.nl/api";
+	  		// Forget pass
+	  		$('.toggle').click(function() {
+			    $('#target').toggle('slow');
+			});
+			$('#get-email').click(function(){
+				var forgetPassEmail = $('input#forget-pass').val();
+				if(forgetPassEmail == '' || forgetPassEmail == null){
+					$("input#forget-pass").css("border", "1px solid red");
+				}else{
+					$("input#forget-pass").css("border", "1px solid #ddd");
+					var url = globalurl+"/forget-app.php?email="+forgetPassEmail;
+				  	$.ajax({
+					  type: "POST",
+					  url: url,
+					  cache: false,
+					  success: function(data){
+					    var decoded_data = $.parseJSON(data);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 200){
+					    	alert('Your Password change request is not accepted, An email is sent to your registered email!');    	
+					    }
+					  },
+					  error: function(error){
+					   },		    	
+					});
+				}				
+			});			
+			// Api call for forget pass ends here -----------------------------	  				  		
+		  $( document ).ready(function(){
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				$('#addProduct').hide(500);
+				$('#favAddList').hide(500);
+				$('#userProductList').hide(500);
+				$('#logoutMenu').hide(500);
+			}
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="home.html";
+			});
+		});
+		  // login api
+		  $("button.button-default").on('click', function(event){
+		  	event.preventDefault();
+		  	var email = $('input#user_email').val();
+	  		var pass = $('input#user_pass').val();
+	  		if(email == ''){
+	  			$('input#user_email').focus();
+	  			$('span.label-input100.email').append('<span class="required-field">(Required*)</span>');
+	  			return false;
+	  		}
+	  		if(pass == ''){
+	  			$('input#user_pass').focus();
+	  			$('span.label-input100.pass').append('<span class="required-field">(Required*)</span>');
+	  			return false;
+	  		}
+		  	var url = globalurl+"/login-app.php";
+		  	$.ajax({
+			  type: "POST",
+			  url: url,
+			  data: {email: email, wachtwoord: pass},
+			  cache: false,
+			  success: function(data){
+			    var decoded_data = $.parseJSON(data);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 200){
+			    	alert('User logged in successfully!');
+			    	var user_login_data = {};
+			    	user_login_data['userId'] = decoded_data.data.wgid;
+			    	user_login_data['userEmail'] = decoded_data.data.email;
+			    	user_login_data['userPass'] = pass;
+			    	user_login_data = JSON.stringify(user_login_data);
+			    	localStorage.setItem("user_data", user_login_data);
+			    	window.location.href="home.html";
+			    }
+			  },
+			  error: function(error){
+			  	var decoded_data = $.parseJSON(error.responseText);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 403){
+			    	alert(decoded_data.meta.message);
+			    }
+			   },		    	
+			});
+		  });
+		});
+	</script>
+</html>

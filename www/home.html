@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yesslite | Mobile App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="shortcut icon" href="img/favicon.png">
+<style>
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+	<!-- loader -->
+	<div id="fakeLoader"></div>
+	<!-- end loader -->
+
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+					<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+	            <li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	            <li class="footer-menu-text"><a id="madeByAuthor" href="https://www.kuroit.com/">Designed By Kuroit</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+	<!-- end navbar top -->
+	<!-- navbar bottom -->
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="home.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="user-chat-list.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar bottom -->
+	<!-- menu -->
+	<div class="menus" id="animatedModal2">
+		<div class="close-animatedModal2 close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<h3>All Categories</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end menu -->	
+	<!-- slider -->
+	<!-- <div class="slider">		
+		<ul class="slides">
+			<li>
+				<img src="img/slide1.jpg" alt="">
+				<div class="caption slider-content">
+					<h2>Casio Baby</h2>
+					<h4>Casio Baby-G BA-110RG-4A Standard</h4>
+					<button class="button-default">Read More</button>
+				</div>
+			</li>
+			<li>
+				<img src="img/slide2.jpg" alt="">
+				<div class="caption slider-content">
+					<h2>Clean and Modern</h2>
+					<h4>Casio Baby-G BA-110RG-4A Standard</h4>
+					<button class="button-default">Read More</button>
+				</div>
+			</li>
+			<li>
+				<img src="img/slide3.jpg" alt="">
+				<div class="caption slider-content">
+					<h2>Casio Baby</h2>
+					<h4>Casio Baby-G BA-110RG-4A Standard</h4>
+					<button class="button-default">Read More</button>
+				</div>
+			</li>
+		</ul>
+	</div> -->
+	<!-- end slider -->
+	<div class="container">
+		<form action="search.html" style="position:relative;">
+	    	<input type="text" maxlength="12" name="submit-search" placeholder="Search..." class="search_bar" required>
+	    	<label for="search_button"><img src="img/search_icon.png" alt="Magnifying Glass" class="button"></label>
+		  	<input type="submit"  id="search_button" style="display:none;">
+	  	</form>
+	</div>
+	<div class="second-level-menu">
+              <div class="menu_link_1">
+                <a href="#animatedModal2" ><div class="link_icon_section_1"><a href="#animatedModal2" id="nav-menu" ><i class="fa fa-list" style="font-size: 17px;"></i></a></div></a>
+                <div class="link_text"><a href="#animatedModal2" >Categories</a></div>
+              </div>
+              <div class="menu_link_1">
+                <a href="contact.html"><div class="link_icon_section_2"><i class="fa fa-bullhorn" style="font-size: 18px;"></i></div></a>
+                <div class="link_text"><a href="contact.html">Support</a></div>
+              </div>
+              <div class="menu_link_1">
+                <a href="fav-add-list.html"><div class="link_icon_section_3"><i class="fa fa-gratipay" style="font-size: 20px;"></i></div></a>
+                <div class="link_text"><a href="fav-add-list.html">Favourites</a></div>
+              </div>
+              <div class="menu_link_1">
+                <a href="add-product.html"><div class="link_icon_section_4"><i class="fa fa-plus-circle" style="font-size: 20px;"></i></div></a>
+                <div class="link_text"><a href="add-product.html">Add Post</a></div>
+              </div>
+    </div>
+	<div class="section product product-list shop">
+		<div class="container">
+			<div class="pages-head">
+				<h3 style="font-size: 18px;">Just For You</h3><div class="loader"></div>
+			</div>
+			<div class="row">
+				<div class="col s6"> 
+					
+				</div>							
+			</div>			
+		</div>
+	</div>
+	<!-- quote -->
+	<div class="section quote bg-second">
+		<div class="container">
+			<h5>Clean & Modern Design</h5>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus illo hic iure eveniet</p>
+			<button class="button-default">Read More</button>
+		</div>
+	</div>
+	<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+	    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+	     xml:space="preserve">
+	        <g>
+	          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+	            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+	            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+	            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+	            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+	            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+	        </g>
+	    </svg>
+	 </a>
+	<!-- end quote -->
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="about-us-foot">
+				<h6>Yessellit</h6>
+				<input type="hidden" name="lastProductId" id="lastProductId" value="0">
+				<input type="hidden" id="lastOffset"/>
+                <input type="hidden" id="lastLimit"/>
+			</div>
+			<div class="copyright">
+				<span>© 2018 All Right Reserved</span>
+			</div>
+		<div>
+	</div>
+	<!-- end footer -->	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/jquery.filterizr.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+			$(".button-collapse").sideNav();
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+			}
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+			// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+		});
+	</script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+	  		var globalurl = "https://www.yessellit.nl/api";	  
+	  		var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				var idUser = userData.userId;
+			}else{
+				var idUser = '';
+			}
+		  	// product api  	
+		  	var url = globalurl+"/listproduct-app.php";
+		  	var lastChatId = '';
+		  	$.ajax({
+			  type: "POST",
+			  url: url,
+			  data: {
+					client : idUser
+
+			  },
+			  cache: false,
+			  success: function(data){
+			  	$('.loader').hide(500);
+			  	var products = $.parseJSON(data);
+			  	var status_code =products.meta.code;
+			  	if(status_code == 200){
+			  		var productLength = products.data;
+			  		productLength = productLength.length;
+			  		dataProduct = products.data;			  		
+			  		for (var i = 0; i < productLength; i++)
+			  		{
+			  			var paypalVal    = dataProduct[i].paypal;
+				        var productTitle = dataProduct[i].titel;
+				        var titleLenght  = productTitle.substr(0, 25);
+				        var productPrice = dataProduct[i].prijs;
+				        var productImage = dataProduct[i].imageField;
+				        var prodId       = dataProduct[i].adid;
+				        if( paypalVal == "BUY" ){
+				        	var productWebsiteLink = `https://www.yessellit.nl/extern_link.php?id=`+prodId;
+				        }else{
+				        	var productWebsiteLink = `blog-single.html?adid=`+prodId;
+				        }
+				        
+		    			var htmlContent  = `<div class="content"><img src="`+productImage+`" alt=""><div class="content-text"><span id="`+prodId+`"><i class="fa fa-heart-o"></i></span><h6><a href="`+productWebsiteLink+`">`+productTitle+`</a></h6><div class="price">€ `+productPrice+`</div></div></div>`;
+		    			$('.product-list .col.s6').append(htmlContent); 			    			        
+				    }
+				    i = i-1;
+                    var lastProductId = dataProduct[i].adid;
+                    var lastLimit     = products.meta.lastLimit;
+                    var lastOffset    = products.meta.lastOffset;
+                    $('#lastProductId').val(lastProductId);
+                    $('#lastLimit').val(lastLimit);
+                    $('#lastOffset').val(lastOffset);
+			  	}
+    		},
+			  error: function(error){
+			  	console.log(error.status);
+			   },		    	
+			});
+
+			// Load More .....................................................................
+			setInterval(function(){
+				var lastAddId = $('#lastProductId').val();
+				var lastLimit = $('#lastLimit').val();
+				var lastOffset = $('#lastOffset').val();
+                if(lastAddId != '' && lastAddId != 0){
+                	console.log('enetr');
+                	$.ajax({
+					  type: "POST",
+					  url: url,
+					  data: {
+							client : idUser,
+							lastadid : lastAddId,
+							lastOffset: lastOffset,
+							lastLimit: lastLimit
+					  },
+					  cache: false,
+					  success: function(data){
+					  	$('.loader').hide(500);
+					  	var products = $.parseJSON(data);
+					  	var status_code =products.meta.code;
+					  	if(status_code == 200){
+					  		var productLength = products.data;
+					  		productLength = productLength.length;
+					  		dataProduct = products.data;			  		
+					  		for (var i = 0; i < productLength; i++)
+					  		{
+					  			var paypalVal    = dataProduct[i].paypal;
+						        var productTitle = dataProduct[i].titel;
+						        var titleLenght  = productTitle.substr(0, 25);
+						        var productPrice = dataProduct[i].prijs;
+						        var productImage = dataProduct[i].imageField;
+						        var prodId       = dataProduct[i].adid;
+						        if( paypalVal == "BUY" ){
+						        	var productWebsiteLink = `https://www.yessellit.nl/extern_link.php?id=`+prodId;
+						        }else{
+						        	var productWebsiteLink = `blog-single.html?adid=`+prodId;
+						        }
+						        
+				    			var htmlContent  = `<div class="content"><img src="`+productImage+`" alt=""><div class="content-text"><span id="`+prodId+`"><i class="fa fa-heart-o"></i></span><h6><a href="`+productWebsiteLink+`">`+productTitle+`</a></h6><div class="price">€ `+productPrice+`</div></div></div>`;
+				    			$('.product-list .col.s6').append(htmlContent); 			    			        
+						    }
+						    i = i-1;
+		                    var lastProductId = dataProduct[i].adid;
+		                    $('#lastProductId').val(lastProductId);
+		                    var lastLimit     = products.meta.lastLimit;
+		                    var lastOffset    = products.meta.lastOffset;
+		                    $('#lastProductId').val(lastProductId);
+		                    $('#lastLimit').val(lastLimit);
+		                    $('#lastOffset').val(lastOffset);
+					  	}
+		    		},
+					  error: function(error){
+					  	console.log(error.status);
+					   },		    	
+					});
+                }else{
+                	console.log('out');
+                }							
+			 }, 10000);			
+			// Load More ends ................................................................
+		});
+	</script>	
+	<!-- Favorite add -->
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+	  		var globalurl = "https://www.yessellit.nl/api";
+		    $('.content-text span').live('click',function(){
+		    	var adidd = $(this).prop('id');			
+		    	var spani = $(this);
+		    	var userID = user_id;
+		    	var urlFav = globalurl+"/mark-fav.php";		    	
+			  	$.ajax({
+				    type: "POST",
+				    url: urlFav,
+				    data: {
+				  		adid   : adidd, 
+						client : userID
+				    },
+				    cache: false,
+				    success: function(data){
+				  		var markFav = $.parseJSON(data);
+					  	var status_code =markFav.meta.code;
+					  	if(status_code == 200){
+					  		var prodSuccess = markFav.meta.message;
+					  		if(prodSuccess == 'Success.'){
+					  			$(spani).children('i.fa').removeClass('fa-heart-o').addClass('fa-heart');
+					  			alert('Your Favorite Ads are moved to Favorite Post Page');
+								$('.button-collapse').trigger('click');
+								$('#favAddList').addClass('favAdd');					
+					  		}
+					  	}
+	    			},
+				    error: function(error){
+				  	    console.log(error.status);
+				    },		    	
+				});				
+			});
+			$('body').on('click', function(){
+				$('#favAddList').removeClass('favAdd');
+			});		  	
+		});
+	</script>
+	<!-- Fetch categories -->
+	<script type="text/javascript">
+	  	$( document ).ready(function(){	
+	  		var globalurl = "https://www.yessellit.nl/api";	  		  		
+		  // product api  	
+		  	var url = globalurl+"/listcategory-app.php";
+		  	$.ajax({
+			  type: "POST",
+			  url: url,
+			  cache: false,
+			  success: function(data){
+			  	var categories = $.parseJSON(data);
+			  	var status_code =categories.meta.code;
+			  	if(status_code == 200){
+			  		var catData = categories.data;
+			  		var catLength = catData.length;
+			  		for (var i = 0; i < catLength; i++) {
+				        var catId = catData[i].id;
+				        var catValue = catData[i].name;
+				        var catLink = 'blog.html?cat='+catId+'&catName='+encodeURI(catValue);
+				        var categoryContent = '<div class="col s4"><a href="'+catLink+'" class="button-link"><div class="menu-link"><p><span class="number-color"><i class="fa fa-external-link"></i></span>'+catValue+'</p></div></a></div>';
+				        $('.modal-content .row').append(categoryContent);
+				    }
+			  	}
+    		},
+			  error: function(error){
+			  	console.log(error.status);
+			   },		    	
+			});
+		});
+	</script>
+<style type="text/css">
+	.row .col.s6{
+		width: 100%;
+	}
+	.mobile .input-group .powered {
+	    margin-right: 45px;
+	    display: none !important;
+	}
+</style>
+</body>
+</html>

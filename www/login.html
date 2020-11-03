@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - Login Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">	
+	<link rel="shortcut icon" href="img/favicon.png">
+
+	<style>
+	.row .col {
+	    float: left;
+	    box-sizing: border-box;
+	    padding: 0; 
+	    min-height: 1px;
+	    padding-right: 0px;
+	}
+	</style>
+</head>
+<body>
+	<!-- login -->
+	<div class="pages section">
+		<div class="container">
+			<div class="pages-head">
+				<h3>LOGIN</h3>
+			</div>
+			<div class="login">
+				<div class="row">
+					<form class="col s12" action="" method="get">
+						<div class="input-field">
+							<input type="email" id="user_email" class="validate" placeholder="USEREMAIL" required>
+						</div>
+						<div class="input-field">
+							<input type="password" id="user_pass" class="validate" placeholder="PASSWORD" required>
+						</div>					
+
+						<button class="button-default">Login</button>
+						<a href="javascript:void(0)" class="toggle"><h6>Forgot Password ?</h6></a>
+						<div id="target">
+							<label for="forget-pass">Enter email</label>
+							<input type="email" name="email" id="forget-pass">
+							<p id="get-email">Change Password</p>
+						</div>
+						<p class="or-login-part">============ OR ============</p>
+						<div class="about-us-foot">
+							<a href="register.html"><h6>Create an account</h6></a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end login -->	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){	
+	  		var globalurl = "https://www.yessellit.nl/api";
+	  		// Forget pass
+	  		$('.toggle').click(function() {
+			    $('#target').toggle('slow');
+			});
+			$('#get-email').click(function(){
+				var forgetPassEmail = $('input#forget-pass').val();
+				if(forgetPassEmail == '' || forgetPassEmail == null){
+					$("input#forget-pass").css("border", "1px solid red");
+				}else{
+					$("input#forget-pass").css("border", "1px solid #ddd");
+					var url = globalurl+"/forget-app.php?email="+forgetPassEmail;
+				  	$.ajax({
+					  type: "POST",
+					  url: url,
+					  cache: false,
+					  success: function(data){
+					    var decoded_data = $.parseJSON(data);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 200){
+					    	alert('Your Password change request is not accepted, An email is sent to your registered email!');    	
+					    }
+					  },
+					  error: function(error){
+					   },		    	
+					});
+				}				
+			});			
+			// Api call for forget pass ends here -----------------------------	  				  		
+		  $( document ).ready(function(){
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else
+				$('#addProduct').hide(500);
+				$('#favAddList').hide(500);
+				$('#userProductList').hide(500);
+				$('#logoutMenu').hide(500);
+			}
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="home.html";
+			});
+		});
+		  // login api
+		  $("button.button-default").on('click', function(event){
+		  	event.preventDefault();
+		  	var email = $('input#user_email').val();
+	  		var pass = $('input#user_pass').val();
+	  		if(email == ''){
+	  			$('input#user_email').css('border','1px solid red');
+	  			return false;
+	  		}
+	  		if(pass == ''){
+	  			$('input#user_pass').css('border','1px solid red');
+	  			return false;
+	  		}
+		  	var url = globalurl+"/login-app.php";
+		  	$.ajax({
+			  type: "POST",
+			  url: url,
+			  data: {email: email, wachtwoord: pass},
+			  cache: false,
+			  success: function(data){
+			    var decoded_data = $.parseJSON(data);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 200){
+			    	alert('User logged in successfully!');
+			    	console.log(data);
+			    	var user_login_data = {};
+			    	user_login_data['userId'] = decoded_data.data.wgid;
+			    	user_login_data['userEmail'] = decoded_data.data.email;
+			    	user_login_data['userPass'] = pass;
+			    	user_login_data = JSON.stringify(user_login_data);
+			    	localStorage.setItem("user_data", user_login_data);
+			    	window.location.href="home.html";
+			    }
+			  },
+			  error: function(error){
+			  	var decoded_data = $.parseJSON(error.responseText);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 403){
+			    	alert(decoded_data);
+			    	alert(decoded_data.meta.message);
+			    }
+			   },		    	
+			});
+		  });
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - Favorite Ads</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+<style>
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse" style="visibility: hidden;"><i class="fa fa-bars"></i></a>
+	        <a href="javascript: history.go(-1)" class="back-link"><i class="fa fa-arrow-left"></i></a>	  
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+	        		<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+				<li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	            <li class="footer-menu-text"><a id="madeByAuthor" href="https://www.kuroit.com/">Designed By Kuroit</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+	<!-- end navbar top -->
+	<!-- navbar bottom -->
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="home.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="user-chat-list.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar bottom -->	
+	<!-- blog -->
+	<div class="section product product-list shop">
+		<div class="container">
+			<div class="pages-head">
+				<h3>Favorite Ads</h3><span class="view-cat"><a href="home.html">View All Product </a></span>
+			</div>
+			<div class="row">
+				<div class="col s6">				
+				</div>			
+			</div>			
+		</div>
+	</div>
+	<!-- menu -->
+	<div class="menus" id="animatedModal2">
+		<div class="close-animatedModal2 close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<h3>All Categories</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end menu -->
+
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="about-us-foot">
+				<h6>Yessellit</h6>
+			</div>
+			<div class="copyright">
+				<span>© 2018 All Right Reserved</span>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+	    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+	     xml:space="preserve">
+	        <g>
+	          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+	            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+	            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+	            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+	            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+	            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+	        </g>
+	    </svg>
+	 </a>
+	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/jquery.filterizr.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){	
+	  		$(".button-collapse").sideNav();
+	  		var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+			}
+
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+			
+	  		// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+				// 
+			});
+	  		var globalurl = "https://www.yessellit.nl/api";	  		  		
+		  // product api
+		  function getUrlVars()
+			{
+			    var vars = [], hash;
+			    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			    for(var i = 0; i < hashes.length; i++)
+			    {
+			        hash = hashes[i].split('=');
+			        vars.push(hash[0]);
+			        vars[hash[0]] = hash[1];
+			    }
+			    return vars;
+			}
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+			}
+		  	var url = globalurl+"/show-all-fav.php";
+		  	$.ajax({
+			  type: "POST",
+			  url: url,
+			  data: {
+			  		client : user_id
+			  },
+			  cache: false,
+			  success: function(data){
+			  	if(data == 'Something went wrong '){
+			  		var htmlContent = '<p class="not-found-blog">Favorite Product Not Found</p>'
+			  		$('.product-list .col.s6').append(htmlContent);
+			  	}else{
+			  		var products = $.parseJSON(data);
+				  	var status_code =products.meta.code;
+				  	if(status_code == 200){
+				  		var productLength = products.data;
+				  		productLength = productLength.length;
+				  		dataProduct = products.data;		  		
+				  		for (var i = 0; i < productLength; i++)
+				  		{
+					        var productTitle = dataProduct[i].titel;
+					        var titleLenght  = productTitle.substr(0, 25);
+					        var productPrice = dataProduct[i].prijs;
+					        var productImage = dataProduct[i].imageField;
+					        var prodId       = dataProduct[i].adid;
+					        var productWebsiteLink = dataProduct[i].websitelink;	    			
+			    			var htmlContent  = `<div class="content"><img src="`+productImage+`" alt=""><div class="content-text"><span id="`+prodId+`"><i class="fa fa-heart"></i></span><h6><a href="`+productWebsiteLink+`">`+productTitle+`</a></h6><div class="price">€ `+productPrice+`</div></div></div>`;
+			    			$('.product-list .col.s6').append(htmlContent);    			        
+					    }
+				  	}
+			  	}			  	
+    		},
+			  error: function(error){
+			  	console.log(error.status);
+			   },		    	
+			});
+			$('.content-text span').live('click',function(){
+		    	var adidd = $(this).prop('id');
+		    	var userID = user_id;
+		    	var spani = $(this);
+		    	var removeFavorite = globalurl+"/remove-fav.php";
+		    	$.ajax({
+				    type: "POST",
+				    url: removeFavorite,
+				    data: {
+				  		adid   : adidd, 
+						client : userID
+				    },
+				    cache: false,
+				    success: function(data){
+				  		var markFav = $.parseJSON(data);
+					  	var status_code =markFav.meta.code;
+					  	if(status_code == 200){
+					  		var prodSuccess = markFav.meta.message;
+					  		if(prodSuccess == 'Success'){
+					  			$(spani).children('i.fa').removeClass('fa-heart').addClass('fa-heart-o');
+					  			alert('Your Favorite Ads are Removed');
+					  		}
+					  	}
+	    			},
+				    error: function(error){
+				  	    console.log(error.status);
+				    },		    	
+				});	
+		    });
+		});
+	</script>
+	<style type="text/css">
+	.row .col.s6{
+		width: 100%;
+	}
+	.mobile .input-group .powered {
+	    margin-right: 45px;
+	    display: none !important;
+	}
+	.product-list .pages-head{
+		text-align: center;
+	}
+	.shop .pages-head h3 {
+	    text-align: left;
+	}
+	</style>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - A Clean Mobile Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style-chat-list.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+	<style>
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+					<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+	            <li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+	<!-- end navbar top -->
+	<!-- navbar bottom -->
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="index.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="contact.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar bottom -->
+	<!-- menu -->
+	<div class="menus" id="animatedModal2">
+		<div class="close-animatedModal2 close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<h3>All Categories</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end menu -->
+
+	
+	<!-- single post -->
+	<div class="pages section">
+		<div class="container">
+			<div class="loader"></div>
+			<div class="chat-list">
+				<h5 class="h2-border">User Chat List</h5>
+            </div>		
+			</div>
+		</div>	
+	</div>
+	<!-- end single post -->
+	
+
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="about-us-foot">
+				<h6>Yessellit</h6>
+			</div>
+			<div class="copyright">
+				<span>© 2018 All Right Reserved</span>
+			</div>
+		<div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/jquery.filterizr.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var globalurl = "http://yessellit.nl/api";	  		  		
+		  // product api  	
+		  	var url = globalurl+"/displaymessages-app.php";	
+		  	var userData =localStorage.getItem("user_data");
+	        userData = $.parseJSON(userData);
+	        if(userData != null){
+	          var idUser = userData.userId;
+	        }
+	        var currentUserId = idUser;  	
+		  	$.ajax({
+			  type: "GET",
+			  url: url,
+			  data:{
+			  	to_user: currentUserId
+			  },
+			  cache: false,
+			  success: function(data){
+			  	$('.loader').hide(500);
+			  	var chatList = $.parseJSON(data);
+			  	var status_code =chatList.meta.code;
+			  	if(status_code == 200){
+			  		var chatListDown = chatList.data;
+			  		console.log(chatListDown);
+			  		var chatListLength = chatListDown.length;
+			  		for (var i = 0; i < chatListLength; i++){
+			  			var from_user_id = chatListDown[i].from_user_id;
+			  			var username     = chatListDown[i].username;
+			  			var email        = chatListDown[i].email;
+				  		var userChatListHtml = `<a href="chat-with-seller.html?sellerId=`+from_user_id+`&username=`+username+`&useremail=`+email+`"><div class="row2"><div class="left-col"><h6>`+username+`</h6><p>`+email+`</p></div><div class="right-col"><span class="time-right"></span></div></div></a>`;
+
+						$('.chat-list').append(userChatListHtml);
+					}	
+			  	}
+    		},
+			error: function(error){
+			  	console.log(error.status);
+			},		    	
+		});
+	});
+	$(".button-collapse").sideNav();
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+			}
+			// fav list
+			// var user_fav_add = localStorage.getItem("user_fav_add");
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+			// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+	
+	
+</script>
+<style>
+	a.button-default {
+	    display: inline-block;
+	    font-size: 13px;
+	}
+</style>
+</body>
+
+</html>

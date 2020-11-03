@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login Form Yessellit</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/materialize.css">
+<!--===============================================================================================-->
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700,800');
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 100%;
+			background: #2788f7;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.bound {
+		    background-image: url(images/login-signup-back.png);
+		    background-repeat: repeat;
+		    background-position: top center;
+		    background-size: contain;
+		    height: 100vh;
+		    /*overflow: hidden;*/
+		}
+		.user-login-signup-prompt {
+		    width: 100%;
+		    max-width: 100%;
+		    background: #ffffff;
+		    height: 40vh;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    flex-direction: column;
+		}
+		.inner-back-section {
+		    width: 100%;
+		    max-width: 100%;
+		    background: rgba(39, 136, 247, .7);
+		    height: 60vh;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.login-user-option {
+		    width: 100%;
+		    max-width: 80%;
+		    margin: 0px auto;
+		    padding-top: 40px;
+		}
+		.login-user-option a {
+		    font-size: 14px;
+		    color: #fff;
+		    line-height: 1.2;
+		    text-transform: uppercase;
+		    background-color: #2788f7;
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    padding: 0 20px;
+		    height: 50px;
+		    text-decoration: none;
+		    letter-spacing: 1px;
+		}
+		.login-user-option span {
+		    margin-right: 10px;
+		}
+		.or-section {
+		    width: 100%;
+		    max-width: 80%;
+		    margin: 0px auto;
+		    padding-top: 20px;
+		}
+		.or-section p {
+		    font-size: 12px;
+		    text-align: center;
+		    color: #9c9c9c;
+		}
+		.join-up-section {
+		    width: 100%;
+		    max-width: 80%;
+		    margin: 0px auto;
+		    padding-top: 20px;
+		}
+		.forget-pass {
+		    width: 100%;
+		    max-width: 80%;
+		    margin: 0px auto;
+		    padding-top: 20px;
+		    padding-bottom: 20px;
+		}
+		.join-up-section a {
+		    font-size: 14px;
+		    color: #fff;
+		    line-height: 1.2;
+		    text-transform: uppercase;
+		    background-color: #0404ba;
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: -moz-box;
+		    display: -ms-flexbox;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    padding: 0 20px;
+		    height: 50px;
+		    text-decoration: none;
+		    letter-spacing: 1px;
+		}
+		.join-up-section span {
+		    margin-right: 10px;
+		}
+		.inner-back-section img {
+		    width: 90%;
+		}
+		.forget-pass p {
+		    margin-left: 2px;
+		    color: #9c9c9c;
+		    font-size: 8px;
+		    letter-spacing: 1px;
+		    text-align: center;
+		    text-transform: uppercase;
+		}
+		.body-after {
+		    content: "";
+		    position: fixed;
+		    background: rgba(0, 0, 0, 0.5);
+		    z-index: 99;
+		    width: 100%;
+		    height: 100%;
+		    top: 0;
+		    left: 0;
+		    display: none;
+		}
+
+		#refresh {
+		    position: fixed;
+		    top: 10px;
+		    right: 20px;
+		    background-color: #ffffff;
+		    width: 40px;
+		    height: 40px;
+		    border-radius: 40px;
+		    box-shadow: 0px 2px 7px rgba(0,0,0,0.1);
+		    padding: 8px 0 0 8px;
+		    z-index: 998;
+		}
+		.body-after:before {
+		    content: "Internet Connection Lost";
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    display: flex;
+		    flex-direction: row;
+		    align-items: center;
+		    justify-content: center;
+		    color: #ffffff;
+		    font-size: 18px;
+		    background: rgba(0, 0, 0, .8);
+		    padding: 15px;
+		}
+		.icon {
+		    fill: #000000;
+		    transform: rotate(0deg);
+		    transition: fill .25s ease, transform .25s ease;
+		}
+
+		.icon:hover {
+		    fill: #1059FF;
+		    transform: rotate(180deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="bound">
+		<div class="inner-back-section">
+			<img src="images/app-home.png">
+		</div>
+		<div class="user-login-signup-prompt">
+			<div class="login-user-option">
+				<a href="login-form.html"><span><i class="fa fa-user"></i></span> LOGIN WITH EMAIL</a>
+			</div>
+			<div class="or-section">
+				<p>--------- OR ---------</p>
+			</div>
+			<div class="join-up-section">
+				<a href="register.html"><span><i class="fa fa-envelope"></i></span> SIGN UP WITH EMAIL</a>
+			</div>
+			<div class="forget-pass">
+				<p>© 2020 All Right Reserved</p>
+			</div>
+		</div>
+		<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+		    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+		     xml:space="preserve">
+		        <g>
+		          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+		            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+		            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+		            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+		            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+		            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+		        </g>
+		    </svg>
+		 </a>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function(){
+			var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				window.location.href="home.html";
+			}
+		});
+	</script>
+</body>
+</html>

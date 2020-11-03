@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - Contact Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+	<style>
+	.row .col {
+	    float: left;
+	    box-sizing: border-box;
+	    padding: 0; 
+	    min-height: 1px;
+	    padding-right: 0px;
+	}
+	</style>
+</head>
+<body>
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+					<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+	            <li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	            <li class="footer-menu-text"><a id="madeByAuthor" href="https://www.kuroit.com/">Designed By Kuroit</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+	<!-- end navbar top -->
+	<!-- navbar bottom -->
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="index.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="user-chat-list.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<!-- end navbar bottom -->
+	<!-- menu -->
+	<div class="menus" id="animatedModal2">
+		<div class="close-animatedModal2 close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s4">
+						<a href="index.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-home"></i>
+								</div>
+								Home
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="shop.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-shopping-bag"></i>
+								</div>
+								Shop
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="shop-single.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-eye"></i>
+								</div>
+								Single Shop
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s4">
+						<a href="wishlist.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-heart"></i>
+								</div>
+								Wishlist
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="cart.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-shopping-cart"></i>
+								</div>
+								Cart
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="checkout.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-credit-card"></i>
+								</div>
+								Checkout
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s4">
+						<a href="blog.html" class="button-link">	
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-bold"></i>
+								</div>
+								Blog
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="blog-single.html" class="button-link">	
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-file-text-o"></i>
+								</div>
+								Blog Single
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="error404.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-hourglass-half"></i>
+								</div>
+								404
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s4">
+						<a href="testimonial.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-support"></i>
+								</div>
+								Testimonial
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="about-us.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-user"></i>
+								</div>
+								About Us
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="contact.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-envelope-o"></i>
+								</div>
+								Contact
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s4">
+						<a href="setting.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-cog"></i>
+								</div>
+								Settings
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="login.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-sign-in"></i>
+								</div>
+								Login
+							</div>
+						</a>
+					</div>
+					<div class="col s4">
+						<a href="register.html" class="button-link">
+							<div class="menu-link">
+								<div class="icon">
+									<i class="fa fa-user-plus"></i>
+								</div>
+								Register
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end menu -->
+	<!-- contact us -->
+	<div class="pages section">
+		<div class="container">
+			<div class="pages-head">
+				<h3>CONTACT US</h3>
+			</div>
+			<div class="contact-us">
+				<div class="row">
+					<div class="col s12">
+						<form action="http://ngetemplate.tech/Yessellit/Yessellit/send-mail.php" class="contact-form" id="contact-form" method="post">
+							<div class="form-group" id="name-field">
+								<input type="text" class="validate" id="form-name" name="form-name" placeholder="NAME" required>
+							</div>
+							<div class="form-group" id="email-field">
+								<input type="email" class="validate" id="form-email" name="form-email" placeholder="EMAIL" required>
+							</div>
+							<div class="form-group" id="subject-field">
+								<input type="text" class="validate" id="form-subject" name="form-subject" placeholder="SUBJECT" required>
+							</div>
+							<div class="form-group" id="message-field">
+								<textarea name="form-message" id="form-message" cols="30" rows="10" class="materialize-textarea" placeholder="YOUR MESSAGE" required></textarea>
+							</div>
+							<div class="form-group">
+								<button class="btn button-default" type="submit" id="submit" name="submit">SEND MESSAGE</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end contact us -->
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="about-us-foot">
+				<h6>Yessellit</h6>
+				<!-- <p>is a lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p> -->
+			</div>
+			<div class="copyright">
+				<span>© 2018 All Right Reserved</span>
+			</div>
+		<div>
+	</div>
+	<!-- end footer -->
+	<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+	    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+	     xml:space="preserve">
+	        <g>
+	          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+	            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+	            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+	            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+	            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+	            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+	        </g>
+	    </svg>
+	 </a>
+	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/contact-form.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+	  $( document ).ready(function(){
+	  $(".button-collapse").sideNav();
+	});
+	  var userData =localStorage.getItem("user_data");
+	  userData = $.parseJSON(userData);
+	  if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+			}
+
+		// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+		// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+	</script>
+
+</body>
+
+</html>

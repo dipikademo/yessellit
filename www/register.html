@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - A Clean Mobile Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+<style type="text/css">
+	.select-wrapper span.caret {
+	    display: none;
+	}
+	.select-wrapper input.select-dropdown {
+	    display: none !important;
+	}
+
+</style>
+</head>
+<body>
+
+	<!-- loader -->
+	<div id="fakeLoader"></div>
+	<!-- end loader -->
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse" style="visibility: hidden;"><i class="fa fa-bars"></i></a>
+	        <a href="javascript: history.go(-1)" class="back-link"><i class="fa fa-arrow-left"></i></a>	  	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+	        		<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+					<!-- <div class="user-pic">
+					<img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg" alt="User picture">
+					</div>
+					<div class="user-info">
+					<span class="user-name">Dipika
+					<strong>Mehra</strong>
+					</span>
+					</div> -->
+				</div>
+				<li><a id="homeMenu" href="index.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+
+	            <!-- <li><a id="homeMenu" href="index.html">Home</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <li><a id="profileMenu" href="contact.html">Contact</a></li>
+	            <li><a id="loginMenu" href="register.html">Register</a></li>
+	            <li><a id="loginMenu" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li> -->
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+	<div class="pages section">
+		<div class="container">
+			<div class="pages-head">
+				<h3>REGISTER</h3>
+			</div>
+			<div class="register">
+				<div class="row">
+					<form id="msform" action="">
+					  <!-- fieldsets -->  
+					  <fieldset>    
+					    <h2 class="fs-title">Create Account</h2>
+					    <select placeholder="Membership Type" name="membership" id="membership">
+					      <option selected="selected" value="free">Membership Type Free</option>
+					      <option value="paid">Membership Type Paid</option>    
+					    </select>
+					    <select placeholder="For a" name="set" id="set">
+					      <option value="1">For a Private</option>
+					      <option value="2">For a Company</option>    
+					    </select>
+					    <input type="email" name="email" id="emailuser" placeholder="Email" />
+					    <input type="text" name="username" id="username" placeholder="User Name" />			   
+					    <input type="button" name="next" id="next-action" class="next action-button" value="Next" />
+					  </fieldset>
+					  <fieldset class="add-personal-info">    
+					    <h2 class="fs-title">Add Personal Info</h2>
+					    <input type="text" name="companyname" id="companyname" placeholder="Add Company Name">
+					   	<input type="text" name="postalcode" id="postalcode" placeholder="Add Postal Code">	
+					   	<input type="text" name="residence" id="residence" placeholder="Add Residence">	
+					   	<input type="text" name="contact" placeholder="Contact">
+					   	<input type="checkbox" name="termsCondition" id="termsCondition"><label for="termsCondition"><span>I agree to the Terms and Conditions.</span></label>
+					   	<div style="clear: both;"></div>
+					    <input type="button" name="previous" class="previous action-button" value="Previous" />
+					    <input type="submit" name="submit2" class="action-button" id="action-button" value="Submit" />
+					  </fieldset>  
+					</form>
+				</div>
+				<div class="forget-pass">
+				<p style="text-align: center;margin-top: 40px;">© 2020 All Right Reserved</p>
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- end register -->
+
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+	<script type="text/javascript">			
+			  	
+			  	
+		$("#action-button").on('click',function(e){
+			e.preventDefault();				
+				var ship = $('#membership').val();		  	
+			  	var set = $('#set').val();
+			  	var email = $('#emailuser').val();
+			  	var username = $('#username').val();
+			  	var code = $('#postalcode').val();
+			  	var resi = $('#residence').val();
+			  	var contact = resi;
+			  	var av = $("#termsCondition").val();
+			  	var company = $('#companyname').val();
+			  	// Ajax call
+				var globalurl = "https://www.yessellit.nl/api";
+			  	// signup api
+			  	var url = globalurl+"/signup-app.php";
+				$.ajax({
+			  type: "POST",
+			  url: url,
+			  data: {email: email, username: username, contact: contact,woonplaats:resi, postcode:code, adres: resi, bedrijf: set, bedrijfsnaam: company, av: av},
+			  cache: false,
+			  success: function(data){
+			    var decoded_data = $.parseJSON(data);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 200){
+			    	alert('Your User Account Has been Created Successfully! Before you can login you must validate your email address by clicking on the link provide in you registered email!');
+			    	console.log(decoded_data);
+			    	var user_login_data = {};
+			    	user_login_data['userId'] = decoded_data.data.insert_id;
+			    	user_login_data['userEmail'] = email;
+			    	user_login_data = JSON.stringify(user_login_data);
+			    	// localStorage.setItem("user_data", user_login_data);
+			    	window.location.href="index.html";
+			    }
+			  },
+			  error: function(error){
+			  	var decoded_data = $.parseJSON(error.responseText);
+			    var status_code = decoded_data.meta.code;
+			    if(status_code == 403){
+			    	alert(decoded_data);
+			    	alert(decoded_data.meta.message);
+			    }
+			   },		    	
+			});
+			});
+	</script>
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+	  		$(".button-collapse").sideNav();
+	  		var userData =localStorage.getItem("user_data");
+			userData = $.parseJSON(userData);
+			if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				$('#addProduct').hide(500);
+				$('#favAddList').hide(500);
+				$('#userProductList').hide(500);
+				$('#logoutMenu').hide(500);
+			}
+			// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+			// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+	  		// form js next >> previous <<
+	  		//jQuery time
+			var current_fs, next_fs, previous_fs; //fieldsets
+			var left, opacity, scale; //fieldset properties which we will animate
+			var animating; //flag to prevent quick multi-click glitches
+
+			$(".next").click(function(){
+				var email = $('#emailuser').val();
+				var username = $('#username').val();
+				var set = $('#set').val();
+				if(email == ''){
+					$('#emailuser').css('border','1px solid red');
+					return false;
+				}
+				if(username == ''){
+					$('#username').css('border','1px solid red');
+					return false;
+				}
+				if(set == '1'){
+					$('#companyname').hide(500);
+				}else{
+					$('#companyname').show(500);
+				}
+				
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+				
+				//activate next step on progressbar using the index of next_fs
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				
+				//show the next fieldset
+				next_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale current_fs down to 80%
+						scale = 1 - (1 - now) * 0.2;
+						//2. bring next_fs from the right(50%)
+						left = (now * 50)+"%";
+						//3. increase opacity of next_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({
+			        'transform': 'scale('+scale+')',
+			        'position': 'absolute'
+			      });
+						next_fs.css({'left': left, 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});
+
+			$(".previous").click(function(){
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+				
+				//de-activate current step on progressbar
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				
+				//show the previous fieldset
+				previous_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale previous_fs from 80% to 100%
+						scale = 0.8 + (1 - now) * 0.2;
+						//2. take current_fs to the right(50%) - from 0%
+						left = ((1-now) * 50)+"%";
+						//3. increase opacity of previous_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'left': left});
+						previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});			
+		});
+	</script>
+
+</body>
+
+</html>

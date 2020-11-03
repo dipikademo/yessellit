@@ -1,0 +1,240 @@
+/* ------------------------------
+  Import Google Web Font
+---------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700,800');
+*{
+	padding:0px;
+	margin:0px;
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+    height: 100%;
+    background: #f1f5f7;
+}
+.chat-container {
+	width: 100%;
+}
+.inner-block {
+    padding: 64px 0;
+}
+.header-wrap{
+	width: 100%;
+    border-bottom: 1px solid #ddd;
+    display:flex;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+}
+.icon-wrap{
+    width: 10%;
+}
+.icon-wrap i{
+    color: #377cff;
+    font-size: 25px;
+    padding: 15px 0px 0px 15px;
+}
+.name-wrap{
+    width: 80%;
+    padding-top: 15px;
+}
+.slider-title-icon i {
+    padding: 0px 15px 0px 0px;
+}
+.name-wrap h1 {
+   font-size: 15px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+}
+.name-wrap span {
+    font-size: 12px;
+}
+.status {
+    color: #92959E;
+    font-size: 12px;
+    padding: 4px 0px 10px 0px;
+}
+.status a {
+    color: inherit;
+    text-decoration: none;
+}
+.slider-title span a {
+    text-decoration: none;
+    color: initial;
+    }
+.online {
+    color: #6ac702;
+    font-size: 10px !important;
+}
+.slider-wrap{
+	width: 100%;
+    display:flex;
+    margin-bottom: 10px;
+}
+.chatting-wrap{
+	width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    background: #f1f5f7;
+    overflow-y: scroll;
+    height: auto;
+}
+.time-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time-wrap span{
+    font-size: 14px;
+    color: #9e9d9d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.msg {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.slider-title span{
+	font-size: 14px;
+    color: #9e9d9d;
+    padding: 10px 0px 0px 15px;
+}
+.slider-title-icon i {
+    color: #377cff;
+    font-size: 25px;
+}
+.slider-title{
+    display: flex;
+    width: 80%;
+    justify-content: left;
+    align-content: center;
+}
+.slider-title-icon{
+    display: flex;
+    width: 20%;
+    justify-content: flex-end;
+    align-content: center;
+}
+.msg:last-of-type {
+    margin: 0;
+}
+.left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+}
+.msg-img {
+    width: 40px;
+    height: 40px;
+	margin-right: 10px;
+	background: #ddd;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+    border-radius: 50%;
+}
+.msg-text {
+    font-size: 14px;
+}
+.msg-bubble {
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    background: #377cff;
+    color: #e9f3fb;
+}
+.msg-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 32px;
+}
+.msg-info-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+.msg-info-time {
+    font-size: 0.85em;
+}
+.left-msg .msg-bubble {
+    border-bottom-left-radius: 0;
+}
+.right-msg {
+     flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+    background: #fff;
+    color: #000;
+    border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+.msger-inputarea {
+    display: flex;
+    border-top: var(--border);
+    background: #eee;
+}
+.msger-inputarea * {
+    border: none;
+    font-size: 14px;
+}
+.msger-input {
+    flex: 1;
+    border-top: 1px solid #f1f1f1;
+    padding-left: 20px;
+    background: #fff;
+    border-bottom-left-radius: 15px;
+}
+.msger-send-btn {
+    font-size: 20px;
+    padding: 15px 20px;
+    background: #377cff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.23s;
+    border-bottom-right-radius: 15px;
+ }
+.msger-send-btn:hover {
+    background: #377cff;
+}
+.chat-end-section {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    bottom: 0;
+    position: fixed;
+    box-shadow: 1px -1px 40px 0px #ddd;
+}
+.custom {
+    transform: rotate(265deg);
+}
+.images-slider-wrap {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-content: center;
+    margin-bottom:20px;
+}
+#owl-demo .item{
+    margin: 0px !important;
+}
+#owl-demo .item img {
+    display: block;
+    width: 90%;
+    height: 150px;
+    margin-left: 15px;
+}
+.owl-theme .owl-controls {
+    display: none !important;
+}
+.owl-wrapper {
+    width: 6160px !important;
+}
+.owl-carousel .owl-item {
+    float: left;
+    width: 385px !important;
+}

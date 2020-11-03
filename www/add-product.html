@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<meta charset="UTF-8">
+	<title>Yessellit - Add Product</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1 user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="HandheldFriendly" content="True">
+
+	<link rel="stylesheet" href="css/materialize.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/owl.theme.css">
+	<link rel="stylesheet" href="css/owl.transitions.css">
+	<link rel="stylesheet" href="css/fakeLoader.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="shortcut icon" href="img/favicon.png">
+<style type="text/css">
+	.select-wrapper span.caret {
+	    display: none;
+	}
+	.select-wrapper input.select-dropdown {
+	    display: none !important;
+	}
+
+</style>
+</head>
+<body>
+	<!-- navbar top -->
+	<nav class="nav">
+	    <div class="nav-wrapper">
+	        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars"></i></a>	       
+	        <ul class="left side-nav" id="mobile-demo">
+	        	<div class="sidebar-header">
+					<div class="user-info">
+						<span><i class="fa fa-home"></i></span>
+						<span class="user-name"> Welcome, Guest User
+						</span>
+						<span class="edit-profile"></span>
+					</div>
+				</div>
+	            <li><a id="homeMenu" href="home.html">Home</a></li>
+	            <li><a id="addProduct" href="add-product.html">Add Posts</a></li>
+	            <li><a id="favAddList" href="fav-add-list.html">Favourite Posts</a></li>
+	            <li><a id="userProductList" href="user-product-list.html">View Your Ads</a></li>
+	            <li><a id="userChatList" href="user-chat-list.html">Messages</a></li>
+	            <li><a id="searchMenu" href="about-us.html">About Us</a></li>
+	            <!-- user menu -->
+	            <li><a id="loginMenuRegister" href="register.html">Register</a></li>
+	            <li><a id="loginMenuLogin" href="login.html">Login</a></li>
+	            <li><a id="logoutMenu" href="#">Logout</a></li>
+	            <li class="footer-menu-text"><a id="madeByAuthor" href="https://www.kuroit.com/">Designed By Kuroit</a></li>
+	        </ul>
+	        <div class="header-app-image"><img src="img/app-home.png"></div>
+	    </div>
+	</nav>
+
+	<div class="navbar-bottom">
+		<div class="row">
+			<div class="col s4">
+				<a href="home.html"><i class="fa fa-home"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="javascript:void(0);" id="open_main_menu"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="col s4">
+				<a href="user-chat-list.html"><i class="fa fa-envelope-o"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="pages section addPadding">
+		<div class="container">
+			<div class="pages-head">
+			</div>
+			<div class="register">
+				<div class="row">
+					<form id="msform" action="">
+					  <!-- fieldsets -->  
+					  <fieldset>    
+					    <h2 class="fs-title">Create your product or add</h2>
+					    <select placeholder="Select Category" name="cat" id="selectCategory">
+					        <option>Select Category</option> 
+					    </select>
+					   <select placeholder="Select Sub Category" name="subcat" id="selectSubCategory">
+					        <option>Select Sub Category</option>
+					    </select>
+					    <select placeholder="Select Sub Sub Category" name="subsubcat" id="selectSsCategory">
+					        <option>Select Sub Sub Category</option>
+					    </select>
+					    <input type="text" name="titel" id="prodTitle" placeholder="Add Titel" />
+					    <input type="text" name="omschrijving" id="omschrijving" placeholder="Add Omschrijving" />
+					    <input type="number" name="prijs" id="prijs" placeholder="Add prijs" />	    
+					    <input type="button" name="next" id="next-action" class="next action-button" value="Next" />
+					  </fieldset>
+					  <fieldset class="add-personal-info">    
+					    <h2 class="fs-title">Add More Info</h2>
+					    <p> Bieden toestaan <br/><br/>
+					          <input type="radio" class="normal" name="biedenjanee" value="1" checked="checked">ja
+					          <input type="radio" class="normal" id="nobidtrue" name="biedenjanee" value="2" style="border:0;">nee
+					    </p>
+					    <select name="prijsoptie" id="prijsoptie">
+					    	<option>Select Prijsoptie</option>
+					        <option value="1">Of kies</option>
+					        <option value="9">Bieden</option>
+					        <option value="2">N.O.T.K. nader overeen te komen</option>
+					        <option value="3">N.V.T. niet van toepassing</option>
+					        <option value="4">Gratis</option>
+					        <option value="5">Zie omschrijving</option>
+					        <option value="6">Op aanvraag</option>
+					        <option value="7">Gereserveerd</option>
+					        <option value="8">Verkocht</option>
+				        </select>
+				        <p style="margin-bottom: 10px;margin-top: 15px;"> Locatie op kaart weergeven?
+				        	<br/><br/>
+				          <input type="radio" class="normal" name="showonmap" value="1" checked="checked" style="border:0;">ja
+				          <input type="radio" class="normal" name="showonmap" value="2" style="border:0;">nee
+				      	</p>
+					    <input type="text" name="websitelink" placeholder="Add Website Link" value="">
+					    <p> 
+					    	<input type="radio" class="normal" name="typeofad" value="1" checked="checked">Aangeboden
+					        <input type="radio" class="normal" name="typeofad" value="2">Gezocht
+					        <input type="radio" class="normal" name="typeofad" value="3">Ruilen
+					    </p>
+					   	<input type="checkbox" name="topper" id="topper"><label for="topper"><span> Maak een Top Advertentie van uw advertentie voor slechts € 6,05. Uw advertentie zal beter zichtbaar zijn, en zal bovenaan de frontpage worden getoond.</span></label>
+					   	<div style="clear: both;"></div>
+					    <input type="button" name="previous" class="previous action-button" value="Previous" />
+					    <input type="submit" name="submit2" class="action-button" id="action-button" value="Submit" />
+					  </fieldset>  
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end register -->
+	<a href="#" id="refresh" value="Refresh" onClick="history.go()" style="display: none;">
+	    <svg class="icon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	     width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
+	     xml:space="preserve">
+	        <g>
+	          <path  d="M321.832,230.327c-2.133-6.565-9.184-10.154-15.75-8.025l-16.254,5.281C299.785,206.991,305,184.347,305,161.224
+	            c0-84.089-68.41-152.5-152.5-152.5C68.411,8.724,0,77.135,0,161.224s68.411,152.5,152.5,152.5c6.903,0,12.5-5.597,12.5-12.5
+	            c0-6.902-5.597-12.5-12.5-12.5c-70.304,0-127.5-57.195-127.5-127.5c0-70.304,57.196-127.5,127.5-127.5
+	            c70.305,0,127.5,57.196,127.5,127.5c0,19.372-4.371,38.337-12.723,55.568l-5.553-17.096c-2.133-6.564-9.186-10.156-15.75-8.025
+	            c-6.566,2.134-10.16,9.186-8.027,15.751l14.74,45.368c1.715,5.283,6.615,8.642,11.885,8.642c1.279,0,2.582-0.198,3.865-0.614
+	            l45.369-14.738C320.371,243.946,323.965,236.895,321.832,230.327z"/>
+	        </g>
+	    </svg>
+	 </a>
+	<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="about-us-foot">
+				<h6>Yessellit</h6>
+			</div>
+			<div class="copyright">
+				<span>© 2018 All Right Reserved</span>
+			</div>
+		<div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- scripts -->
+	<script src="js/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>	
+	<script src="js/materialize.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/fakeLoader.min.js"></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/network.js"></script>
+	<script type="text/javascript">
+	  	$( document ).ready(function(){
+	  		$(".button-collapse").sideNav();
+	  		// form js next >> previous <<
+	  		//jQuery time
+			var current_fs, next_fs, previous_fs; //fieldsets
+			var left, opacity, scale; //fieldset properties which we will animate
+			var animating; //flag to prevent quick multi-click glitches
+
+			$(".next").click(function(){
+				var email = $('#emailuser').val();
+				var username = $('#username').val();
+				var set = $('#set').val();
+				if(email == ''){
+					$('#emailuser').css('border','1px solid red');
+					return false;
+				}
+				if(username == ''){
+					$('#username').css('border','1px solid red');
+					return false;
+				}
+				if(set == '1'){
+					$('#companyname').hide(500);
+				}else{
+					$('#companyname').show(500);
+				}
+				
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+				
+				//activate next step on progressbar using the index of next_fs
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				
+				//show the next fieldset
+				next_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale current_fs down to 80%
+						scale = 1 - (1 - now) * 0.2;
+						//2. bring next_fs from the right(50%)
+						left = (now * 50)+"%";
+						//3. increase opacity of next_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({
+			        'transform': 'scale('+scale+')',
+			        'position': 'absolute'
+			      });
+						next_fs.css({'left': left, 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});
+
+			$(".previous").click(function(){
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+				
+				//de-activate current step on progressbar
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				
+				//show the previous fieldset
+				previous_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale previous_fs from 80% to 100%
+						scale = 0.8 + (1 - now) * 0.2;
+						//2. take current_fs to the right(50%) - from 0%
+						left = ((1-now) * 50)+"%";
+						//3. increase opacity of previous_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'left': left});
+						previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
+			});			
+		});
+	</script>
+	<script type="text/javascript">			  	
+	    var userData =localStorage.getItem("user_data");
+
+	    var html_Content_div_alert  = `<div id="alert_container_id" class="alert_container"><span><strong>Well done!</strong> You have successfully added item.</span></div>`;
+		$('.nav').after(html_Content_div_alert); 
+		userData = $.parseJSON(userData);
+		if(userData != null){
+				user_id    = userData.userId;
+				user_email = userData.userEmail;
+				var editProfileContent = `<a href="edit-profile.html?wk_id=`+user_id+`"><i class="fa fa-pencil"></i> Edit Profile `;
+				$('span.user-name').text(user_email);
+				$('#loginMenuRegister').hide(500);
+				$('#loginMenuLogin').hide(500);
+				$('span.edit-profile').append(editProfileContent);
+			}else{
+				window.location.href="index.html";
+			}
+			
+		// LogOut User
+			$('#logoutMenu').on('click',function(e){
+				e.preventDefault();
+				localStorage.removeItem('user_data');
+				window.location.href="index.html";
+			});
+
+		// Open Menu
+			$('#open_main_menu').on('click', function(){
+				$('.button-collapse').trigger('click');
+			});
+
+		$("#action-button").on('click',function(e){
+			e.preventDefault();				
+				var cat          = $('#selectCategory').val();		  	
+			  	var subCat       = $('#selectSubCategory').val();
+			  	var ssCat        = $('#selectSsCategory').val();
+			  	var titel        = $('#prodTitle').val();
+			  	var omschrijving = $('#omschrijving').val();
+			  	var prijs        = $('#prijs').val();
+			  	var nobidtrue    = $("input[name=biedenjanee]").val();
+			  	var prijsoptie   = $('#prijsoptie').val();
+			  	var showonmap    = $('input[name=showonmap]').val();
+			  	var websitelink  = $('input[name=websitelink]').val();
+			  	var typeofad     = $('input[name=typeofad]').val();
+			  	var topper       = $('#topper').val();
+			  	// Get Owner Id			  	
+				if(userData != null){
+					user_id    = userData.userId;
+				}
+			  	var ownerId = user_id;
+			  	// Ajax call
+				var globalurl = "https://www.yessellit.nl/api";
+			  	// signup api
+			  	var url = globalurl+"/addad-app.php";
+				$.ajax({
+				    type: "POST",
+				    url: url,
+				    data: {
+				  		cat          : cat, 
+						subcat       : subCat, 
+						subsubcat    : ssCat,
+						titel        : titel, 
+						omschrijving :omschrijving, 
+						prijs        : prijs, 
+						biedenjanee  : nobidtrue, 
+						prijsoptie   : prijsoptie, 
+						showonmap    : showonmap,
+						websitelink  :websitelink,
+						typeofad     :typeofad,
+						topper       : topper,
+						ownerid      : ownerId
+				    },
+				  cache: false,
+				  success: function(data){
+				    var decoded_data = $.parseJSON(data);
+				    var status_code = decoded_data.meta.code;
+				    if(status_code == 200){
+				    	alert('Your Product is Added Successfully!');
+				    	window.location.href='add-product.html?success=true';
+				    }
+				  },
+				  error: function(error){
+				  	var decoded_data = $.parseJSON(error.responseText);
+				    var status_code = decoded_data.meta.code;
+				    if(status_code == 403){
+				    	alert(decoded_data);
+				    	alert(decoded_data.meta.message);
+				    }
+				   },		    	
+				});
+			});
+	</script>
+	<script type="text/javascript">
+		$( document ).ready(function(){
+			$('input.select-dropdown, .select-wrapper span.caret').hide();
+			if(window.location.search.substring(1)=='success=true') {
+				$('.alert_container').css('display','block');
+			}
+		var globalurl = "https://www.yessellit.nl/api";
+		// get cat api
+		var url = globalurl+"/get-cat-sub-subSub.php";
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: {
+					get_cat : 'true',
+				},
+				cache: false,
+				success: function(data){	
+				   	var decoded_data = $.parseJSON(data);
+				    var status_code = decoded_data.meta.code;
+				    if(status_code == 200){
+				    	var all_cat = decoded_data.data;
+				    	for (var i = 0; i < all_cat.length; i++) {
+				    		var cat_id = all_cat[i].id;
+				    		var cat_name = all_cat[i].name;
+				    		var optionsList = `<option value="`+cat_id+`">`+cat_name+`</option>`;
+				    		$('#selectCategory').append(optionsList);
+				    	}				    	
+				    }
+				},
+				error: function(error){
+					console.log(error);
+				  	var decoded_data = $.parseJSON(error.responseText);
+				    var status_code = decoded_data.meta.code;
+				    if(status_code == 403){
+				    	alert(decoded_data);
+				    	alert(decoded_data.meta.message);
+				    }
+				},		    	
+			});
+			// on cat id select change
+			$('#selectCategory').live('change',function(){
+				var selectVal = $(this).val();
+				$('select#selectSubCategory').empty();
+				var optionsListSelect = `<option>Select Sub Category</option>`;
+				$('select#selectSubCategory').append(optionsListSelect);
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: {
+						cat_id : selectVal,
+					},
+					cache: false,
+					success: function(data){	
+					   	var decoded_data = $.parseJSON(data);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 200){
+					    	var all_cat = decoded_data.data;
+					    	for (var i = 0; i < all_cat.length; i++) {
+					    		var cat_id = all_cat[i].id;
+					    		var cat_name = all_cat[i].name;
+					    		var optionsList = `<option value="`+cat_id+`">`+cat_name+`</option>`;
+					    		$('select#selectSubCategory').append(optionsList);
+					    	}				    	
+					    }
+					},
+					error: function(error){
+						console.log(error);
+					  	var decoded_data = $.parseJSON(error.responseText);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 403){
+					    	alert(decoded_data);
+					    	alert(decoded_data.meta.message);
+					    }
+					},		    	
+				});
+			});
+			// on sub cat id select change
+			$('#selectSubCategory').live('change',function(){
+				var selectValSub = $(this).val();
+				$('select#selectSsCategory').empty();
+				var optionsListSelect = `<option>Select Sub Sub Category</option>`;
+				$('select#selectSsCategory').append(optionsListSelect);
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: {
+						cat_sub_id : selectValSub,
+					},
+					cache: false,
+					success: function(data){	
+					   	var decoded_data = $.parseJSON(data);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 200){
+					    	var all_cat_sub = decoded_data.data;
+					    	if(all_cat_sub == null){
+					    		var optionsListSub = `<option>No Sub Sub Category Found</option>`;
+						    	$('select#selectSsCategory').append(optionsListSub);
+					    	}else{
+					    		for (var i = 0; i < all_cat_sub.length; i++) {
+						    		var Sub_cat_id = all_cat_sub[i].id;
+						    		var Sub_cat_name = all_cat_sub[i].name;
+						    		var optionsListSub = `<option value="`+Sub_cat_id+`">`+Sub_cat_name+`</option>`;
+						    		$('select#selectSsCategory').append(optionsListSub);
+						    	}
+					    	}					    					    	
+					    }
+					},
+					error: function(error){
+						console.log(error);
+					  	var decoded_data = $.parseJSON(error.responseText);
+					    var status_code = decoded_data.meta.code;
+					    if(status_code == 403){
+					    	alert(decoded_data);
+					    	alert(decoded_data.meta.message);
+					    }
+					},		    	
+				});
+			});
+		});
+	</script>
+</body>
+</html>
